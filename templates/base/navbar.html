@@ -1,0 +1,17 @@
+{% load static %}
+<nav class="navbar fixed-top navbar-expand-sm navbar-dark" id="navbar">
+  <a class="navbar-brand" href="/"><img src="{% static 'img/logo.png' %}" alt="logo" style="height: 50px; scale: 1.5;"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      {% for link,nama in nav %}
+        <li class="nav-item active">
+          <a class="nav-link" href="{{link}}">{{nama}}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

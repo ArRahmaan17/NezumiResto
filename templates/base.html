@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{title}}</title>
+    {% include 'base/style.html' %}
+    
+    {% block css %}
+        
+    {% endblock css %}
+    
+</head>
+<body>
+    {% include 'base/navbar.html' %}
+    
+            
+            {% block about %}
+
+            {% endblock about %}
+                
+        </div>
+    </div>
+
+    {% block branch %}
+      
+    {% endblock branch %}
+
+    {% block quote %}
+      
+    {% endblock quote %}
+
+    {% block copyright %}
+      
+    {% endblock copyright %}
+
+    {% include 'base/script.html' %}
+    
+    {% block script %}
+        
+    {% endblock script %}
+</body>
+</html>

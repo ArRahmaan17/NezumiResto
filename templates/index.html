@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock css %}
+
+
+{% block about %}
+<div class="content">
+  <div class="about">
+    <div class="text-center">
+      <img src="{% static 'img/logo.png' %}" class="img-fluid" alt="Responsive image">
+    </div>
+  </div>
+</div>
+{%endblock about %}
+
+{% block branch %}
+<div class="open"><p class="lead text-center text-light">{{title}}</p></div>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container text-light text-right">
+    <h1 class="display-4 text-center text" style="margin-top: 100px;">Branch</h1>
+    {% for nama,kota1,kota2,kota3,kota4,kota5 in branch %}
+    <h1 class="display-4">{{nama}}</h1>
+    <br>
+    <p class="lead">{{kota1}} ,{{kota2}} ,{{kota3}} ,{{kota4}} ,{{kota5}}</p>
+    {% endfor %}
+    </div>
+</div>
+{% endblock branch %}
+
+{% block quote %}
+<div class="d-flex mc-auto bg-dark justify-content-center">
+  <div id="quote" class="text-light text-center">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex nemo, sint magnam voluptate unde, ab eum repellat enim placeat quidem eligendi assumenda consequatur blanditiis! Earum temporibus ipsa commodi quibusdam consequuntur!
+  </div>
+</div>
+{% endblock quote %}
+
+{% block copyright %}
+<div class="copyright">
+  <div class="con text-light">
+    {% for link, nama in sosialmedia %}
+        <a class=" text-light nav-link d-block" href="{{link}}">{{nama}}</a>
+    {% endfor %}
+    <p class="nav-link">&copy {{title}} - 2020</p>
+  </div>
+  
+</div>
+{% endblock copyright %}
+    
